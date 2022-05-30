@@ -1,0 +1,23 @@
+<h2>Coins</h2>
+<form [formGroup]="coinForm" (ngSubmit)="submit(coinForm)">
+    <div>
+        <label>id</label>
+        <input formControlName="id">
+    </div>
+<div>
+    <label>Name</label>
+    <input formControlName="name">
+</div>
+<div>
+    <label>Coin</label>
+    <input formControlName="coin">
+</div>
+<button type="sumbit" >Submit</button>
+</form>
+
+<div>
+Results
+<div *ngFor="let res of resultKey">
+    {{res}} - {{result[res]}}
+</div>
+</div>
